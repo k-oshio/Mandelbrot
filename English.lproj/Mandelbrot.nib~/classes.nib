@@ -1,0 +1,62 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {showHelp = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = MandelCSView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {colorControl = id; control = id; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            ACTIONS = {
+                apply = id; 
+                channelChanged = id; 
+                fieldSet = id; 
+                patternChanged = id; 
+                sliderMoved = id; 
+                toggleContinuous = id; 
+            }; 
+            CLASS = MandelColor; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                chSelector = id; 
+                colorView = id; 
+                control = id; 
+                mainView = id; 
+                paramField = id; 
+                paramSlider = id; 
+                patternSelector = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {copyView = id; setPlace = id; start = id; }; 
+            CLASS = MandelControl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                colorControl = id; 
+                depthField = id; 
+                places = id; 
+                view = id; 
+                window = id; 
+                xcField = id; 
+                xsField = id; 
+                ycField = id; 
+                ysField = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = MandelView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {colorControl = id; control = id; }; 
+            SUPERCLASS = NSView; 
+        }
+    ); 
+    IBVersion = 1; 
+}

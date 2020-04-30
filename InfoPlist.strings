@@ -1,0 +1,6 @@
+/* Localized versions of Info.plist keys */
+
+CFBundleName = "Mandelbrot";
+CFBundleShortVersionString = "Mandelbrot version 0.9";
+CFBundleGetInfoString = "Mandelbrot version 0.9, Copyright 2000 - 2010 Koichi Oshio.";
+NSHumanReadableCopyright = "Copyright 2000 - 2010 Koichi Oshio.";
