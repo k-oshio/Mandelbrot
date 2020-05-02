@@ -38,7 +38,8 @@ typedef struct plc {
 	IBOutlet id				window;
     IBOutlet id				colorControl;
     IBOutlet id				places;
-	IBOutlet NSPopUpButton	*depthButton;
+    IBOutlet NSPopUpButton  *depthButton;
+    IBOutlet NSPopUpButton  *colorButton;
     IBOutlet NSTextField	*xcField;
     IBOutlet NSTextField	*ycField;
     IBOutlet NSTextField	*xsField;
@@ -62,5 +63,6 @@ typedef struct plc {
 - (IBAction)textChanged:(id)sender;
 - (IBAction)back:(id)sender;
 - (IBAction)next:(id)sender;
+- (IBAction)colorChanged:(id)sender;
 
 @end

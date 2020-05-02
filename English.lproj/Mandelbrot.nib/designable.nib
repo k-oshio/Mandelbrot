@@ -162,7 +162,7 @@
                         </textFieldCell>
                     </textField>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="389">
-                        <rect key="frame" x="395" y="20" width="41" height="25"/>
+                        <rect key="frame" x="400" y="20" width="41" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSLeftFacingTriangleTemplate" imagePosition="only" alignment="center" borderStyle="border" inset="2" id="408">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -172,8 +172,30 @@
                             <action selector="back:" target="224" id="391"/>
                         </connections>
                     </button>
+                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HmB-Dv-mG4">
+                        <rect key="frame" x="315" y="72" width="180" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <popUpButtonCell key="cell" type="push" title="Storms" bezelStyle="rounded" alignment="left" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="psQ-Nc-14d" id="lrv-zX-Aa9">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" size="12" name="Helvetica"/>
+                            <menu key="menu" title="OtherViews" id="hgl-4Q-cMN">
+                                <items>
+                                    <menuItem title="Storms" state="on" id="psQ-Nc-14d"/>
+                                    <menuItem title="Zebra" tag="1" id="xyk-OT-MHo"/>
+                                    <menuItem title="Oasis" tag="2" id="fSY-ZW-edK"/>
+                                    <menuItem title="Arctic" tag="3" id="KYW-e9-GLf"/>
+                                    <menuItem title="Gothic" tag="4" id="MZI-vL-XY7"/>
+                                    <menuItem title="Deco" tag="5" id="8ZN-Vs-drF"/>
+                                    <menuItem title="Linear" tag="6" id="Qxn-up-OU2"/>
+                                </items>
+                            </menu>
+                            <connections>
+                                <action selector="colorChanged:" target="224" id="JAy-eE-hWM"/>
+                            </connections>
+                        </popUpButtonCell>
+                    </popUpButton>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="418">
-                        <rect key="frame" x="451" y="20" width="41" height="25"/>
+                        <rect key="frame" x="440" y="20" width="41" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSRightFacingTriangleTemplate" imagePosition="only" alignment="center" state="on" borderStyle="border" inset="2" id="419">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -183,38 +205,11 @@
                             <action selector="next:" target="224" id="426"/>
                         </connections>
                     </button>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="422">
-                        <rect key="frame" x="325" y="70" width="58" height="22"/>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZeL-Xr-vdq">
+                        <rect key="frame" x="268" y="79" width="45" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" drawsBackground="YES" id="423">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="429">
-                        <rect key="frame" x="434" y="70" width="58" height="22"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" drawsBackground="YES" id="430">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="427">
-                        <rect key="frame" x="258" y="74" width="62" height="15"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="right" title="Current :" id="428">
-                            <font key="font" size="12" name="Helvetica"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="431">
-                        <rect key="frame" x="368" y="74" width="62" height="15"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="right" title="Total :" id="432">
-                            <font key="font" size="12" name="Helvetica"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="right" title="Colors :" id="WrQ-XW-X3k">
+                            <font key="font" metaFont="smallSystem"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -352,16 +347,16 @@
                     </menu>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="691" y="560"/>
         </menu>
         <customObject id="224" userLabel="MainControl" customClass="MandelControl">
             <connections>
+                <outlet property="colorButton" destination="HmB-Dv-mG4" id="gEB-87-iBP"/>
                 <outlet property="colorControl" destination="268" id="286"/>
-                <outlet property="currentIndex" destination="422" id="433"/>
                 <outlet property="depthButton" destination="442" id="462"/>
                 <outlet property="leftButton" destination="389" id="440"/>
                 <outlet property="places" destination="305" id="312"/>
                 <outlet property="rightButton" destination="418" id="441"/>
-                <outlet property="totalInHistory" destination="429" id="434"/>
                 <outlet property="view" destination="214" id="280"/>
                 <outlet property="window" destination="21" id="332"/>
                 <outlet property="xcField" destination="216" id="226"/>
@@ -369,7 +364,7 @@
                 <outlet property="ycField" destination="217" id="228"/>
             </connections>
         </customObject>
-        <window title="Color Control" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" deferred="NO" releasedWhenClosed="NO" animationBehavior="default" id="236" userLabel="ColorPanel" customClass="NSPanel">
+        <window title="Color Control" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" deferred="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="236" userLabel="ColorPanel" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="1202" y="681" width="429" height="217"/>
@@ -523,6 +518,7 @@
                     </textField>
                 </subviews>
             </view>
+            <point key="canvasLocation" x="691" y="361"/>
         </window>
         <customObject id="268" userLabel="ColorControl" customClass="MandelColor">
             <connections>

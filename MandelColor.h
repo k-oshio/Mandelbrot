@@ -50,5 +50,6 @@ typedef struct {
 - (void)channelChanged:(id)sender;
 - (void)sliderMoved:(id)sender;
 - (void)fieldSet:(id)sender;
+- (void)setColorPattern:(int)pt;
 
 @end

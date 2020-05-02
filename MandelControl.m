@@ -211,6 +211,15 @@ plc place_array[NPLACES] = {
 	[view start];
 }
 
+- (IBAction)colorChanged:(id)sender
+{
+    int ptn;
+    
+    ptn = [[sender selectedCell] tag];
+    [colorControl setColorPattern:ptn];
+    [colorButton selectItemWithTag:ptn];
+}
+
 - (void)updatePlaceWithRect:(NSRect)rect
 {
     double	current_ys;

@@ -47,15 +47,22 @@ ColorParam	cp_array[] = {
 
 - (void)patternChanged:(id)sender
 {
-	int	i;
-	pattern = [[patternSelector selectedCell] tag];
-	cparam = cp_array[pattern];
-	[self channelChanged:self];	// update sliders
-	for (i = 0; i < 3; i++) { // rgb
-	    [self makeLUTforChannel:i];
-	}
+	pattern = [[sender selectedCell] tag];
+    [self setColorPattern:pattern];
+    [control colorChanged:sender];
+}
+
+- (void)setColorPattern:(int)pt
+{
+    int    i;
+    cparam = cp_array[pt];
+    [self channelChanged:self];    // update sliders
+    for (i = 0; i < 3; i++) { // rgb
+        [self makeLUTforChannel:i];
+    }
     [colorView display];
     [mainView display];
+    [patternSelector selectItemWithTag:pt];
 }
 
 - (void)channelChanged:(id)sender
