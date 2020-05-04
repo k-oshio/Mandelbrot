@@ -188,7 +188,6 @@ int calc_mode = 1;	// 0: Single thread, 1: Multithread using NSOperation
 	startPoint = [e locationInWindow];
 	startPoint = [self convertPoint:startPoint fromView:nil];
     rect = NSMakeRect(startPoint.x, startPoint.y, 0.0, 0.0);
-    [self lockFocus];
  
     for (;;) {
         e = [[self window] nextEventMatchingMask:
@@ -201,23 +200,13 @@ int calc_mode = 1;	// 0: Single thread, 1: Multithread using NSOperation
         rect.origin.x = MIN(currPoint.x, startPoint.x);
         rect.origin.y = MIN(currPoint.y, startPoint.y);
         if (rect.size.height == 0 || rect.size.width == 0) continue;
-/*
-        if (cache_valid) {
-            [[self window] restoreCachedImage];
-        }
-        [[self window] cacheImageInRect:[self convertRect:rect toView:nil]];
-        cache_valid = YES;
-        NSFrameRect(rect);	// draw box without anti-aliasing
-*/
 
         cursorOn = YES;
         cursorRect = rect;
         [self display];
-    //    [[self window] flushWindowIfNeeded];
     }
     // rect selected
     cursorOn = NO;
-    [self unlockFocus];
 
     if ((rect.size.width > 0) && (rect.size.height > 0)) {
 		[control updatePlaceWithRect:rect];
